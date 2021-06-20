@@ -1,0 +1,71 @@
+import React , { useState } from 'react';
+import { StyleSheet, Image , Text, View , TouchableOpacity } from 'react-native';
+//Styles
+
+import { StyleData , ScreenDisp } from '../Ui/StyleData'
+
+const Menu = ({ onFunction }) => {
+
+  return (
+        <View style={ navBar.main } >
+            <View style={ navBar.logo } >
+               <Text style={ navBar.logoText }>Goeato</Text>
+            </View>
+          
+            <TouchableOpacity style={ navBar.icon }  onPress={onFunction}>
+                     <Image 
+                        source ={require('../assets/notification.png')}
+                        resizeMode ='contain'
+                        style = {{
+                            width:25,
+                            height : 25,
+                            margin:20,
+                            tintColor : StyleData.SecondaryColor,
+                        }}
+                    ></Image>
+            </TouchableOpacity>
+        </View>
+  );
+}
+
+export default Menu;
+
+const navBar = StyleSheet.create({
+  main: {
+    width: '100%',
+    height: 75,
+    backgroundColor: StyleData.PriColor,
+    overflow: 'hidden',
+    flexDirection: "row",
+    flexWrap: "wrap",
+    padding : 15,
+  },
+  logo: {
+    width : '80%',
+    height : '100%',
+    backgroundColor : StyleData.PriColor,
+    marginVertical : 15,
+  },
+  logoText : {
+      fontSize : 24,
+  },
+  logoImg : {
+      width : '75%',
+      height : 60,
+      margin: 4,
+  },
+  icon : {
+      width : '20%',
+      height : 60,
+      backgroundColor : StyleData.PriColor,
+  },
+  mainNavListOff : {
+      display : 'none',
+  },
+  mainNavListOn : {
+      width : '100%',
+      height : 600,
+      backgroundColor : StyleData.PriColor,
+      display : 'flex',  
+  },
+});
