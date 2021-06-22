@@ -7,6 +7,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 
 import Home from './component/Home';
 import Notification from './component/Notification'
+import Feedview from './component/Feedview'
 
 
 const Stack = createStackNavigator();
@@ -22,6 +23,7 @@ export default function App() {
         >
             <Stack.Screen name="Home" component={Home} />
             <Stack.Screen name="Notification" component={Notification} />
+            <Stack.Screen name="Feedview" component={ Feedview } />
 
         </Stack.Navigator>
     </NavigationContainer>

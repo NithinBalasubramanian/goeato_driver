@@ -26,7 +26,7 @@ export default function Home({ navigation }) {
 
   return (
       <>
-      <Menu onFunction={navigationFunction}  />
+      <Menu onFunction={ navigationFunction }  />
       <Tab.Navigator tabBarOptions={{
              showLabel : false,
              style : {

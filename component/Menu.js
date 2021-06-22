@@ -11,7 +11,9 @@ const Menu = ({ onFunction }) => {
             <View style={ navBar.logo } >
                <Text style={ navBar.logoText }>Goeato</Text>
             </View>
-          
+            <TouchableOpacity>
+              <Text style={ navBar.online }>Online</Text>
+            </TouchableOpacity>
             <TouchableOpacity style={ navBar.icon }  onPress={onFunction}>
                      <Image 
                         source ={require('../assets/notification.png')}
@@ -41,7 +43,7 @@ const navBar = StyleSheet.create({
     padding : 15,
   },
   logo: {
-    width : '80%',
+    width : '55%',
     height : '100%',
     backgroundColor : StyleData.PriColor,
     marginVertical : 15,
@@ -68,4 +70,13 @@ const navBar = StyleSheet.create({
       backgroundColor : StyleData.PriColor,
       display : 'flex',  
   },
+  online : { 
+    paddingVertical : 5,
+    paddingHorizontal : 10,
+    marginTop : 20,
+    marginHorizontal : 10,
+    backgroundColor : 'green' ,
+    color : StyleData.White ,
+    borderRadius : 10 
+  }
 });

@@ -5,7 +5,8 @@ import { StyleSheet, Image , Text, View , ScrollView , Alert ,TouchableOpacity }
 
 import { StyleData , ScreenDisp } from '../Ui/StyleData'
 
-const Feed = () => {
+const Feed = ( { navigation }) => {
+
 
     const orders = [
         {
@@ -55,7 +56,7 @@ const Feed = () => {
             <View style={ Style.midView }>
                 { orders.map((itm,k) => {
                     return(
-                        <TouchableOpacity style={ Style.feedCart }>
+                        <TouchableOpacity style={ Style.feedCart } key={ k } onPress={ () => { navigation.push("Feedview", itm )} }>
                             <View style={ Style.orderHead }>
                                  <Text style={ Style.restaurant }>
                                   { itm.restaurant }

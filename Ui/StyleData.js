@@ -7,6 +7,7 @@ export const StyleData = {
     White : '#fff',
     cardColor : '#e9f7ec',
     background : "#edf2ed",
+    shadeColor : '#cfcecc',
 }
 
 export const ScreenDisp = {
